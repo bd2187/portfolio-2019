@@ -19,7 +19,7 @@ const About = () => {
 };
 
 const Contact = () => {
-    return Contact;
+    return <h1>Contact</h1>;
 };
 
 const Navigation = () => {
