@@ -12,8 +12,20 @@ module.exports = {
     module: {
         rules: [
             { test: /\.js$/, loader: "babel-loader", exclude: /node_modules/ },
+            { test: /\.html$/, loader: "html-loader" },
 
-            { test: /\.html$/, loader: "html-loader" }
+            {
+                test: /\.css$/,
+                loader: "style-loader"
+            },
+            {
+                test: /\.css$/,
+                loader: "css-loader",
+                query: {
+                    modules: true,
+                    localIdentName: "[name]__[local]___[hash:base64:5]"
+                }
+            }
         ]
     },
 
@@ -23,7 +35,7 @@ module.exports = {
 
     plugins: [
         new HtmlWebpackPlugin({
-            template: "./src/index.html"
+            template: "./src/public/index.html"
         })
     ]
 };
