@@ -15,7 +15,7 @@
 
 .navigation-menu {
     z-index: 9;
-    background: #000;
+    background: #cee6ea;
     height: 100%;
 
     position: fixed;
@@ -38,18 +38,18 @@
     font-size: 4em;
     margin: 0.5em 0;
     text-align: center;
-    color: #fff;
+    color: #1d2021;
 }
 
 .hamburger-menu {
-    color: #000;
+    color: #1d2021;
     position: relative;
 }
 
 .hamburger-piece {
     width: 35px;
     height: 5px;
-    background-color: black;
+    background-color: #1d2021;
     margin: 6px 0;
     transition: all 0.5s ease-in-out;
 }
