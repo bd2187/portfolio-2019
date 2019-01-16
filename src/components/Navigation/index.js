@@ -21,6 +21,34 @@ class Navigation extends Component {
         this.setState({ isNavOpen: false });
     }
 
+    displayHamburgerMenu(isNavOpen) {
+        return (
+            <div className={styles["hamburger-menu"]}>
+                <div
+                    className={`${styles["hamburger-piece"]} 
+                        ${isNavOpen ? styles["open"] : ""}
+                        ${
+                            isNavOpen
+                                ? styles["first-hamburger-piece-open"]
+                                : ""
+                        } 
+                        `}
+                />
+
+                <div
+                    className={`${styles["hamburger-piece"]} 
+                        ${isNavOpen ? styles["open"] : ""}
+                        ${
+                            isNavOpen
+                                ? styles["second-hamburger-piece-open"]
+                                : ""
+                        } 
+                    `}
+                />
+            </div>
+        );
+    }
+
     render() {
         const isNavOpen = this.state.isNavOpen;
         return (
@@ -29,7 +57,7 @@ class Navigation extends Component {
                     className={styles["fixed-header"]}
                     onClick={this.onHamburgerClicked}
                 >
-                    <div className={styles["hamburger-menu"]}>burger</div>
+                    {this.displayHamburgerMenu(isNavOpen)}
                 </div>
                 <div
                     className={`${styles["navigation-menu"]} ${
