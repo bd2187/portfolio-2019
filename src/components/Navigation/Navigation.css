@@ -3,8 +3,10 @@
     height: 70px;
     position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 10;
-    /* background: red; */
+
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -33,7 +35,7 @@
 }
 
 .nav-option {
-    font-size: 5em;
+    font-size: 4em;
     margin: 0.5em 0;
     text-align: center;
     color: #fff;
