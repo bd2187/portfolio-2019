@@ -61,7 +61,7 @@ class Navigation extends Component {
                 </div>
                 <div
                     className={`${styles["navigation-menu"]} ${
-                        isNavOpen ? styles["nav-open"] : styles["nav-closed"]
+                        isNavOpen ? "" : styles["nav-closed"]
                     }`}
                 >
                     <Link to="/" onClick={this.closeNav}>
