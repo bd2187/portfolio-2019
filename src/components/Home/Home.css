@@ -4,4 +4,9 @@
 
 .title-wrap h1 {
     font-size: 3.25em;
+    color: #1d2021;
+}
+
+.off-color-for-text {
+    color: #e14761;
 }
