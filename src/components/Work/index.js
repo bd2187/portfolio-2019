@@ -7,7 +7,7 @@ var renderWorkItem = item => {
 
     return (
         <li key={item.seoTitle}>
-            <Link to={`work/${item.seoTitle}`}>{item.title}</Link>
+            <Link to={`/work/${item.seoTitle}`}>{item.title}</Link>
         </li>
     );
 };
