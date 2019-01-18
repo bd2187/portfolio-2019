@@ -21,7 +21,7 @@ flirt4free.technologies = ["HTML", "CSS", "Javascript", "AJAX"];
 
 var netflixClone = Object.create(WorkDataTemplate);
 netflixClone.title = "Netflix Clone";
-netflixClone.seoTtile = "netflix-clone";
+netflixClone.seoTitle = "netflix-clone";
 netflixClone.img = "some image";
 netflixClone.gif = "gif";
 netflixClone.link = "link";
