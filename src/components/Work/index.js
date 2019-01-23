@@ -1,13 +1,26 @@
 import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
+import styles from "./Work.css";
 import workCollection from "../../config/work";
 
 var renderWorkItem = item => {
-    // return <li key={item.title}>{item.title}</li>;
-
     return (
-        <li key={item.seoTitle}>
-            <Link to={`/work/${item.seoTitle}`}>{item.title}</Link>
+        <li key={item.seoTitle} className={styles["project-thumbnail"]}>
+            <Link
+                to={`/work/${item.seoTitle}`}
+                className={styles["project-link"]}
+            >
+                <div className={styles["project-img-container"]}>
+                    <img src={require("../../public/images/f4f.png")} />
+                </div>
+                <div className={styles["project-info-container"]}>
+                    <h4 className={styles["project-title"]}>{item.title}</h4>
+                    <p className={styles["project-description"]}>
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry.
+                    </p>
+                </div>
+            </Link>
         </li>
     );
 };
@@ -25,10 +38,14 @@ const Work = () => {
     return (
         <Fragment>
             <h1>Professional</h1>
-            <ul>{professionalWork.map(renderWorkItem)}</ul>
+            <ul className={styles["thumbnails-container"]}>
+                {professionalWork.map(renderWorkItem)}
+            </ul>
 
             <h1>Personal</h1>
-            <ul>{personalWork.map(renderWorkItem)}</ul>
+            <ul className={styles["thumbnails-container"]}>
+                {personalWork.map(renderWorkItem)}
+            </ul>
         </Fragment>
     );
 };
