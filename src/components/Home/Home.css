@@ -1,5 +1,7 @@
 .title-wrap {
     /* background: orange; */
+    max-width: 715px;
+    margin: 0 auto;
 }
 
 .title-wrap h1 {
@@ -9,4 +11,16 @@
 
 .off-color-for-text {
     color: #e14761;
+}
+
+@media only screen and (min-width: 500px) {
+    .title-wrap h1 {
+        font-size: 4.25em;
+    }
+}
+
+@media only screen and (min-width: 575px) {
+    .title-wrap h1 {
+        font-size: 5.25em;
+    }
 }
