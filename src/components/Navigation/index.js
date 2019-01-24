@@ -11,6 +11,7 @@ class Navigation extends Component {
 
         this.onHamburgerClicked = this.onHamburgerClicked.bind(this);
         this.closeNav = this.closeNav.bind(this);
+        this.displayHamburgerMenu = this.displayHamburgerMenu.bind(this);
     }
 
     onHamburgerClicked() {
@@ -23,7 +24,10 @@ class Navigation extends Component {
 
     displayHamburgerMenu(isNavOpen) {
         return (
-            <div className={styles["hamburger-menu"]}>
+            <div
+                className={styles["hamburger-menu"]}
+                onClick={this.onHamburgerClicked}
+            >
                 <div
                     className={`${styles["hamburger-piece"]} 
                         ${isNavOpen ? styles["open"] : ""}
@@ -34,7 +38,6 @@ class Navigation extends Component {
                         } 
                         `}
                 />
-
                 <div
                     className={`${styles["hamburger-piece"]} 
                         ${isNavOpen ? styles["open"] : ""}
@@ -53,10 +56,7 @@ class Navigation extends Component {
         const isNavOpen = this.state.isNavOpen;
         return (
             <Fragment>
-                <div
-                    className={styles["fixed-header"]}
-                    onClick={this.onHamburgerClicked}
-                >
+                <div className={styles["fixed-header"]}>
                     {this.displayHamburgerMenu(isNavOpen)}
                 </div>
                 <div
@@ -64,16 +64,32 @@ class Navigation extends Component {
                         isNavOpen ? "" : styles["nav-closed"]
                     }`}
                 >
-                    <Link to="/" onClick={this.closeNav}>
+                    <Link
+                        to="/"
+                        onClick={this.closeNav}
+                        className={styles["header-link"]}
+                    >
                         <h2 className={styles["nav-option"]}>Home</h2>
                     </Link>
-                    <Link to="/work" onClick={this.closeNav}>
+                    <Link
+                        to="/work"
+                        onClick={this.closeNav}
+                        className={styles["header-link"]}
+                    >
                         <h2 className={styles["nav-option"]}>Work</h2>
                     </Link>
-                    <Link to="/about" onClick={this.closeNav}>
+                    <Link
+                        to="/about"
+                        onClick={this.closeNav}
+                        className={styles["header-link"]}
+                    >
                         <h2 className={styles["nav-option"]}>About me</h2>
                     </Link>
-                    <Link to="/contact" onClick={this.closeNav}>
+                    <Link
+                        to="/contact"
+                        onClick={this.closeNav}
+                        className={styles["header-link"]}
+                    >
                         <h2 className={styles["nav-option"]}>Contact</h2>
                     </Link>
                 </div>
