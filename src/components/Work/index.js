@@ -11,7 +11,7 @@ var renderWorkItem = item => {
                 className={styles["project-link"]}
             >
                 <div className={styles["project-img-container"]}>
-                    <img src={require("../../public/images/f4f.png")} />
+                    <img src={require(`../../public/images/${item.img}`)} />
                 </div>
                 <div className={styles["project-info-container"]}>
                     <h4 className={styles["project-title"]}>{item.title}</h4>
@@ -37,12 +37,12 @@ const Work = () => {
 
     return (
         <Fragment>
-            <h1>Professional</h1>
+            <h1 className={styles["category-title"]}>Professional</h1>
             <ul className={styles["thumbnails-container"]}>
                 {professionalWork.map(renderWorkItem)}
             </ul>
 
-            <h1>Personal</h1>
+            <h1 className={styles["category-title"]}>Personal</h1>
             <ul className={styles["thumbnails-container"]}>
                 {personalWork.map(renderWorkItem)}
             </ul>
