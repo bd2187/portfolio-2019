@@ -1,10 +1,14 @@
 .title-wrap {
     /* background: orange; */
-    max-width: 715px;
-    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    margin-top: -70px;
 }
 
 .title-wrap h1 {
+    max-width: 900px;
+    margin: 0 auto;
     font-size: 3.25em;
     color: #1d2021;
 }
