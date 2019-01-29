@@ -11,7 +11,7 @@ const Skills = () => {
                         className={styles["skills-icon"]}
                         src={require(`../../public/icons/javascript.svg`)}
                     />
-                    <h4>Javascript</h4>
+                    <h4>Javascript (ES6+)</h4>
                 </li>
                 <li>
                     <img
@@ -97,8 +97,9 @@ const About = () => {
             </p>
 
             <p className={styles["paragraph-container"]}>
-                Other facts about me: I love to learn-- learning new ways to
-                improve code and build & maintain user interfaces.
+                Other facts about me: I love to learn. I enjoy learning new ways
+                to improve code along with building and maintaining user
+                interfaces.
             </p>
 
             <Skills />
