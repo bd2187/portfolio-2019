@@ -83,7 +83,7 @@ class Navigation extends Component {
                         onClick={this.closeNav}
                         className={styles["header-link"]}
                     >
-                        <h2 className={styles["nav-option"]}>About me</h2>
+                        <h2 className={styles["nav-option"]}>About</h2>
                     </Link>
                     <Link
                         to="/contact"
