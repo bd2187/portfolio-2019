@@ -1,4 +1,43 @@
 .contact-container {
+    max-width: 475px;
+    margin: 5em auto;
+
+    margin: 5em auto;
 }
+
+.contact-container .contact-inner-container {
+    display: flex;
+    align-items: center;
+    width: 90%;
+
+    margin: 0 auto;
+}
+
+.contact-container li {
+    margin: 1.5em auto;
+}
+
 .contact-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+
+    font-size: 1.75em;
+    background: #3c489c;
+}
+
+.contact-icon,
+.contact-icon:visited {
+    color: #fff;
+}
+.contact-link,
+.contact-link:visited {
+    color: #000;
+}
+
+.contact-link {
+    margin: 0 0.75em;
 }

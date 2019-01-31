@@ -6,7 +6,7 @@ const contactData = [
         text: "brandon.dionisio.26@gmail.com",
         link: "brandon.dionisio.26@gmail.com",
         type: "email",
-        icon: "fas fa-envelope"
+        icon: "far fa-envelope"
     },
 
     {
@@ -27,12 +27,22 @@ const contactData = [
 const ContactItem = ({ text, link, type, icon }) => {
     return (
         <li>
-            <a className={styles["contact-icon"]} href={link} target="_blank">
-                <i className={icon} />
-            </a>
-            <a href={link} target="_blank">
-                {text}
-            </a>
+            <div className={styles["contact-inner-container"]}>
+                <a
+                    className={styles["contact-icon"]}
+                    href={link}
+                    target="_blank"
+                >
+                    <i className={icon} />
+                </a>
+                <a
+                    className={styles["contact-link"]}
+                    href={link}
+                    target="_blank"
+                >
+                    {text}
+                </a>
+            </div>
         </li>
     );
 };
