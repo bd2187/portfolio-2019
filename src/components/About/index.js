@@ -63,9 +63,8 @@ const Skills = () => {
                     <img
                         className={styles["skills-icon"]}
                         src={require(`../../public/icons/webpack.png`)}
-                        // style={{ marginLeft: "-15px" }}
                     />
-                    <h4>Node.js</h4>
+                    <h4>Webpack</h4>
                 </li>
                 <li>
                     <img
