@@ -4,7 +4,7 @@ import styles from "./Contact.css";
 const contactData = [
     {
         text: "brandon.dionisio.26@gmail.com",
-        link: "brandon.dionisio.26@gmail.com",
+        link: "mailto:brandon.dionisio.26@gmail.com",
         type: "email",
         icon: "far fa-envelope"
     },
@@ -25,20 +25,21 @@ const contactData = [
 ];
 
 const ContactItem = ({ text, link, type, icon }) => {
+    var openInNewTab = type === "website" ? "_blank" : "";
     return (
         <li>
             <div className={styles["contact-inner-container"]}>
                 <a
                     className={styles["contact-icon"]}
                     href={link}
-                    target="_blank"
+                    target={openInNewTab}
                 >
                     <i className={icon} />
                 </a>
                 <a
                     className={styles["contact-link"]}
                     href={link}
-                    target="_blank"
+                    target={openInNewTab}
                 >
                     {text}
                 </a>
@@ -50,17 +51,19 @@ const ContactItem = ({ text, link, type, icon }) => {
 const Contact = () => {
     return (
         <Fragment>
-            <ul className={styles["contact-container"]}>
-                {contactData.map(item => (
-                    <ContactItem
-                        key={item.text}
-                        text={item.text}
-                        link={item.link}
-                        type={item.type}
-                        icon={item.icon}
-                    />
-                ))}
-            </ul>
+            <div className={styles["contact-container-wrap"]}>
+                <ul className={styles["contact-container"]}>
+                    {contactData.map(item => (
+                        <ContactItem
+                            key={item.text}
+                            text={item.text}
+                            link={item.link}
+                            type={item.type}
+                            icon={item.icon}
+                        />
+                    ))}
+                </ul>
+            </div>
         </Fragment>
     );
 };
