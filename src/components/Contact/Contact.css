@@ -1,8 +1,19 @@
+.contact-container-wrap {
+    position: relative;
+    height: calc(100vh - 70px);
+}
+
 .contact-container {
     max-width: 475px;
     margin: 5em auto;
 
     margin: 5em auto;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 15%;
+    transform: translateY(-15%);
 }
 
 .contact-container .contact-inner-container {
@@ -21,11 +32,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 75px;
-    height: 75px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
 
-    font-size: 1.75em;
+    font-size: 1.25em;
     background: #3c489c;
 }
 
@@ -40,4 +51,17 @@
 
 .contact-link {
     margin: 0 0.75em;
+    font-size: 0.75em;
+}
+
+@media only screen and (min-width: 600px) {
+    .contact-icon {
+        width: 75px;
+        height: 75px;
+        font-size: 1.75em;
+    }
+
+    .contact-link {
+        font-size: 1.15em;
+    }
 }
