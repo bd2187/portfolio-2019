@@ -152,6 +152,7 @@
 .modal {
     background: #ededed;
     max-width: 500px;
+    min-width: 250px;
     width: 50%;
     padding: 1.5em;
     border-radius: 10px;
