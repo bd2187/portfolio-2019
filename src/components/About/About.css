@@ -11,6 +11,7 @@
 .paragraph-container {
     width: 50%;
     max-width: 450px;
+    min-width: 220px;
     margin: 0.75em auto;
     font-size: 1.2em;
 }
