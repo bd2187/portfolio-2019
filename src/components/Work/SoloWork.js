@@ -6,18 +6,38 @@ import styles from "./Work.css";
 
 const AdultDisclaimerModal = ({ linkToVisit, closeDisclaimer }) => {
     return (
-        <div>
-            <p>
-                Warning: The site you are about to visit contains adult content.
-                You must be at least 18 years old to visit this site.{" "}
-            </p>
-            <div>
-                <p>Are you sure you want to visit this site?</p>
-                <div>
-                    <a href={linkToVisit} target="_blank">
+        <div className={styles["modal-shadow"]}>
+            <div className={styles["modal"]}>
+                <div
+                    className={styles["exit-button"]}
+                    onClick={closeDisclaimer}
+                >
+                    <div className={styles["close-bar"]} />
+                    <div className={styles["close-bar"]} />
+                </div>
+                <p className={styles["modal-dialog"]}>
+                    Warning: The site you are about to visit contains{" "}
+                    <span id={styles["adultContentText"]}>adult content</span>.
+                    You must be at least 18 years old to visit this site.{" "}
+                </p>
+
+                <p className={styles["modal-dialog"]}>
+                    Are you sure you want to visit this site?
+                </p>
+                <div className={styles["buttons-container"]}>
+                    <a
+                        className={styles["modal-button"]}
+                        href={linkToVisit}
+                        target="_blank"
+                    >
                         Yes
                     </a>
-                    <button onClick={closeDisclaimer}>No</button>
+                    <button
+                        className={styles["modal-button"]}
+                        onClick={closeDisclaimer}
+                    >
+                        No
+                    </button>
                 </div>
             </div>
         </div>
@@ -56,7 +76,14 @@ class SoloWork extends Component {
                 : null;
         })[0];
 
-        const { title, link, github } = workInfo;
+        const {
+            title,
+            link,
+            github,
+            gif,
+            description,
+            technologies
+        } = workInfo;
 
         if (!workInfo) {
             return <h1>Could not find project</h1>;
@@ -68,17 +95,15 @@ class SoloWork extends Component {
                 <h1 className={styles["project-title"]}>{title}</h1>
                 <div className={styles["project-content-container"]}>
                     <p className={styles["project-description"]}>
-                        Lorem Ipsum is simply dummy text of the printing and
-                        typesetting industry. Lorem Ipsum has been the
-                        industry's standard dummy text ever since the 1500s,
-                        when an unknown printer took a galley of type and
-                        scrambled it to make a type specimen book.{" "}
+                        {description}
                     </p>
-                    <img
-                        className={styles["project-gif"]}
-                        src="https://media.giphy.com/media/14mcdRwHEgEG3u/giphy.gif"
-                    />
+                    <img className={styles["project-gif"]} src={gif} />
                 </div>
+                <ul className={styles["tech-container"]}>
+                    {technologies.map(function(techName) {
+                        return <li key={techName}>{techName}</li>;
+                    })}
+                </ul>
                 <div className={styles["project-links"]}>
                     {github ? (
                         <a href={github} target="_blank">
