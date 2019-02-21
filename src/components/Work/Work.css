@@ -70,6 +70,11 @@
     font-size: 1.2em;
 }
 
+.project-content-container .project-description {
+    text-align: center;
+    line-height: 1.5;
+}
+
 .project-info-container .project-description {
     font-size: 0.95em;
 }
@@ -92,6 +97,10 @@
 
 .project-content-container {
     /* background: orange; */
+    /* display: flex;
+    flex-direction: column; */
+    max-width: 550px;
+    margin: 0 auto;
 }
 
 .project-gif {
@@ -123,6 +132,100 @@
 .view-more-projects i {
     display: inline-block;
     margin-right: 0.25em;
+}
+
+.modal-shadow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal {
+    background: #ededed;
+    max-width: 500px;
+    width: 50%;
+    padding: 1.5em;
+    border-radius: 10px;
+    position: relative;
+}
+
+.modal-dialog {
+    text-align: center;
+    margin: 1em;
+    color: #3c489c;
+}
+
+#adultContentText {
+    color: red;
+    text-decoration: underline;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+}
+
+.modal-button {
+    display: block;
+    background: none;
+    color: #fff;
+    background: #e14761;
+    padding: 0.5em;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    margin: 0 0.5em;
+}
+
+.exit-button {
+    background: #e14761;
+
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.close-bar {
+    width: 20px;
+    height: 5px;
+    background: #fff;
+}
+
+.close-bar {
+    position: absolute;
+}
+.close-bar:first-child {
+    transform: rotate(45deg);
+}
+
+.close-bar:last-child {
+    transform: rotate(-45deg);
+}
+
+.tech-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 450px;
+    margin: 0 auto;
 }
 
 @media only screen and (min-width: 660px) {
