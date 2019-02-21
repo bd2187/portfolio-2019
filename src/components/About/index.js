@@ -74,14 +74,14 @@ const Skills = () => {
                     />
                     <h4>Git / Github</h4>
                 </li>
-                <li>
+                {/* <li>
                     <img
                         className={styles["skills-icon"]}
                         src={require(`../../public/icons/node.png`)}
                         style={{ marginLeft: "-15px" }}
                     />
                     <h4>Node.js</h4>
-                </li>
+                </li> */}
             </ul>
         </Fragment>
     );
@@ -92,7 +92,7 @@ const About = () => {
             <h1 className={styles["category-title"]}>About</h1>
             <p className={styles["paragraph-container"]}>
                 Hi! I'm Brandon, a Front End Developer currently working at VS
-                Media. My interests include Javascript, React, Redux, Node.js.
+                Media. My interests include Javascript, React, Redux.
             </p>
 
             <p className={styles["paragraph-container"]}>
