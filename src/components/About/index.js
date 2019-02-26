@@ -74,6 +74,15 @@ const Skills = () => {
                     />
                     <h4>Git / Github</h4>
                 </li>
+                <li>
+                    <img
+                        className={styles["skills-icon"]}
+                        src={require(`../../public/icons/svn.png`)}
+                        style={{ maxWidth: "75px" }}
+                    />
+                    <h4>SVN / Subversion</h4>
+                </li>
+
                 {/* <li>
                     <img
                         className={styles["skills-icon"]}
@@ -92,7 +101,7 @@ const About = () => {
             <h1 className={styles["category-title"]}>About</h1>
             <p className={styles["paragraph-container"]}>
                 Hi! I'm Brandon, a Front End Developer currently working at VS
-                Media. My interests include Javascript, React, Redux.
+                Media. My interests include Javascript, React, & Redux.
             </p>
 
             <p className={styles["paragraph-container"]}>
