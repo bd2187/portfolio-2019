@@ -8,18 +8,21 @@ import About from "../components/About";
 import Contact from "../components/Contact";
 
 import Navigation from "../components/Navigation";
+import ScrollToTop from "../components/ScrollToTop";
 
 const routes = (
     <Router>
         <Fragment>
-            <Navigation />
-            <Switch>
-                <Route exact path="/" component={Home} />
-                <Route exact path="/work" component={Work} />
-                <Route exact path="/work/:workTitle" component={SoloWork} />
-                <Route exact path="/about" component={About} />
-                <Route exact path="/contact" component={Contact} />
-            </Switch>
+            <ScrollToTop>
+                <Navigation />
+                <Switch>
+                    <Route exact path="/" component={Home} />
+                    <Route exact path="/work" component={Work} />
+                    <Route exact path="/work/:workTitle" component={SoloWork} />
+                    <Route exact path="/about" component={About} />
+                    <Route exact path="/contact" component={Contact} />
+                </Switch>
+            </ScrollToTop>
         </Fragment>
     </Router>
 );
