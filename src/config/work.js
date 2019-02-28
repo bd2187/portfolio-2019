@@ -19,7 +19,7 @@ flirt4free.github = "";
 flirt4free.professional = true;
 flirt4free.technologies = ["HTML", "CSS", "Javascript", "Websockets", "HLS.js"];
 flirt4free.description =
-    "An adult entertainment site which specializes in video chat with webcam models. My contributions included connecting to a chat server via Websockets to relay chat messages, setting up video streams, sending AJAX requests from the client to the server for sending tips to models, and much more. I contributed to refactoring and re-imaging the mobile experience for Flirt4Free in order to deliver a smoother and responsive experience for users.";
+    "An adult entertainment site which specializes in video chat with webcam models. My contributions include connecting to a chat server via Websockets to relay chat messages, setting up video streams, sending AJAX requests from the client to the server for sending tips to models, and much more. I contributed to refactoring and re-imaging the mobile experience for Flirt4Free in order to deliver a smoother and responsive experience for users.";
 
 var flirt4freeSchedulingTool = Object.create(WorkDataTemplate);
 flirt4freeSchedulingTool.title = "F4F Scheduling Tool";
